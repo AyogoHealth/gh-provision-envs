@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+*~
+.#*
+.tscache
+!*/*.js
+coverage
+.nyc_output/
+node_modules
+npm-debug.log

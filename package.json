@@ -1,0 +1,29 @@
+{
+  "name": "gh-provision-envs",
+  "version": "1.0.0",
+  "description": "GitHub CLI command to provision environments with secrets and variables from a configuration file.",
+  "main": "index.js",
+  "exports": "index.js",
+  "bin": {
+    "gh-provision-envs": "gh-provision-envs-cli.js"
+  },
+  "type": "module",
+  "author": "Ayogo Health Inc. <opensource@ayogo.com>",
+  "contributors": [
+    "Darryl Pogue <darryl@dpogue.ca>"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 16.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyogoHealth/gh-provision-envs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AyogoHealth/gh-provision-envs/issues"
+  },
+  "files": [
+    "*.js"
+  ]
+}
