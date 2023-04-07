@@ -29,7 +29,7 @@ function createEnvironment(repoName, envName) {
     "-H", `"Accept: application/vnd.github+json"`,
     "-H", `"X-GitHub-Api-Version: ${GITHUB_API_VERSION}"`,
     "-X", "PUT",
-    `/repos/${owner}/${repo}/environments/${config.name}`
+    `/repos/${owner}/${repo}/environments/${envName}`
   ], { shell: true });
 
   if (result.status === 0) {
