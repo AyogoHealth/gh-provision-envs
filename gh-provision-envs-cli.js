@@ -6,18 +6,29 @@ import { readFileSync } from "node:fs";
 import { provisionEnvironments } from "./index.js";
 
 
-const args = parseArgs({ allowPositionals: true, options: {}});
-if (args.positionals.length < 1) {
-  console.error(`Must provide a configuration file path`);
+const args = parseArgs({ options: {
+  "repo": {
+    type: "string",
+    short: "R"
+  },
+  "config": {
+    type: "string",
+    short: "c"
+  }
+}});
+
+if (!("config" in args.values)) {
+  console.error(`Must provide a configuration file path with --config`);
   process.exit(1);
 }
-if (args.positionals.length < 2) {
+
+if (!("repo" in args.values)) {
   console.error(`Must provide a repository name (in "owner/repo" format)`);
   process.exit(1);
 }
 
-const configFile = args.positionals[0];
-const repoName = args.positionals[1];
+const configFile = args.values.config;
+const repoName = args.values.repo;
 let configData = {};
 
 try {
