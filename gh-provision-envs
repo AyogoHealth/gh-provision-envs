@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+# Determine if an executable is in the PATH
+if ! type -p node >/dev/null; then
+   echo "Node not found on the system" >&2
+   exit 1
+fi
+
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Pass arguments through to another command
+node ${SCRIPT_DIR}/gh-provision-envs-cli.js "$@"

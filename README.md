@@ -10,13 +10,14 @@
 At its simplest, you give it a JSON config file and a repository name:
 
 ```
-gh-provision-envs config.json myuser/myrepo
+npx gh-provision-envs -c config.json -R myuser/myrepo
 ```
 
 If you have the `gh-provision-envs` tool on your path, you can also run it as an extension to the `gh` CLI tool:
 
 ```
-gh provision-envs config.json myuser/myrepo
+gh extension install AyogoHealth/gh-provision-envs
+gh provision-envs -c config.json -R myuser/myrepo
 ```
 
 ### Disclaimers
