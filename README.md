@@ -1,19 +1,16 @@
 # GitHub Environment Provisioning
 
+A GitHub CLI command to provision environments with secrets and variables from a configuration file.
+
 ## Requirements
 
 * The [GitHub CLI](https://cli.github.com/) tool
 * Administrative permissions on the GitHub repositories you want to run this on
+* NodeJS 18.x or newer
 
 ## Usage
 
-At its simplest, you give it a JSON config file and a repository name:
-
-```
-npx gh-provision-envs -c config.json -R myuser/myrepo
-```
-
-If you have the `gh-provision-envs` tool on your path, you can also run it as an extension to the `gh` CLI tool:
+You can install this as an extension to the `gh` CLI tool. At its simplest, you give it a JSON config file and a repository name:
 
 ```
 gh extension install AyogoHealth/gh-provision-envs
@@ -84,6 +81,6 @@ By participating in this project you agree to abide by its terms.
 
 ## Licence
 
-Released under the MIT Licence.
+Released under the [MIT Licence](LICENCE).
 
 Copyright © 2023 Ayogo Health Inc.
